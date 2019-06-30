@@ -7,8 +7,26 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(Center(
-    child: MyWidget(),
+    child: App(),
   ));
+}
+
+class App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(// 导航条
+          title: Text('FlutterDemo'),
+        ),
+        body: MyWidget(),
+      ),
+      theme: ThemeData(
+        primaryColor: Colors.green,
+      ),
+    );
+  }
 }
 
 // 一个 Widget 就是一个类
