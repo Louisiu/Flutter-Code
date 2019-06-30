@@ -15,11 +15,18 @@ void main() {
 class MyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final _textStyle = TextStyle(
+      color: Colors.red,
+      fontSize: 40.0,
+      fontWeight: FontWeight.bold,
+    );
+
     // TODO: implement build
     return Center(
       child: Text(
         'hello flutter',
         textDirection: TextDirection.ltr,
+        style: _textStyle,
       ),
     );
   }
