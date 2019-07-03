@@ -7,6 +7,7 @@
 import 'package:flutter/material.dart';
 
 import 'model/car.dart';
+import 'model/listview_demo_dart.dart';
 
 void main() {
   runApp(Center(
@@ -18,7 +19,8 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return MaterialApp(
+    return MaterialApp(//
+      debugShowCheckedModeBanner: false,
       home: Home(),
       theme: ThemeData(
         primaryColor: Colors.green,
@@ -27,30 +29,7 @@ class App extends StatelessWidget {
   }
 }
 
-class Cell extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return null;
-  }
-}
-
 class Home extends StatelessWidget {
-
-  Widget _cellForRow(BuildContext context, int index) {
-
-    return Container(
-      color: Colors.white,
-      margin: EdgeInsets.all(10.0),
-      child: Column(
-        children: <Widget>[
-          Text(datas[index].name),
-          Container(height: 15,),
-          Image.network(datas[index].imageUrl),
-        ],
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,10 +38,7 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Text('FlutterDemo'),
       ),
-      body: ListView.builder(
-        itemCount: datas.length,// flutter 没有组，只有行；组要自己写
-        itemBuilder: _cellForRow,
-      ),
+      body: ListViewDemo(),
     );
   }
 }
