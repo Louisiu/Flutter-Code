@@ -6,8 +6,8 @@
 
 import 'package:flutter/material.dart';
 
-import 'model/car.dart';
-import 'model/listview_demo_dart.dart';
+import 'model/base_widget.dart';
+import 'model/listview_demo.dart';
 
 void main() {
   runApp(Center(
@@ -38,7 +38,7 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Text('FlutterDemo'),
       ),
-      body: ListViewDemo(),
+      body: RichTextDemo(),
     );
   }
 }
